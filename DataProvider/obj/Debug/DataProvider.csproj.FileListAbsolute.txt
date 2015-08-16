@@ -1,0 +1,5 @@
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\bin\Debug\DataProvider.dll
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\bin\Debug\DataProvider.pdb
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\obj\Debug\DataProvider.csprojResolveAssemblyReference.cache
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\obj\Debug\DataProvider.dll
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\obj\Debug\DataProvider.pdb

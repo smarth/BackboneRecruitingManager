@@ -1,0 +1,108 @@
+﻿<!-- Templates-->
+<script type="text/template" id="tpl-candidate-list-item">
+    <a href='#Candidates/<%= Id %>'><%= Name %></a>
+</script>
+
+<script type="text/template" id="tpl-recruiter-list-item">
+    <a href='#Recruiters/<%= Id %>'><%= Name %></a>
+</script>
+
+<script type="text/template" id="tpl-recruiter-selector">
+    <select id="recruiterId">
+        <option value=""></option>
+        <% _(recruiterList).each(function(recruiter) { %>
+        <option value="<%= recruiter.Id %>"><%= recruiter.Name %></option>
+        <% }); %>
+    </select>
+</script>
+
+<script type="text/template" id="tpl-candidate-details">
+    <div style="padding:10px;">
+
+        <label>Id:</label>
+        <input type="text" id="candidateId" name="id" value="<%= Id %>" disabled />
+        <br/>
+        <label>Name:</label>
+        <input type="text" id="name" name="name" value="<%= Name %>" required />
+        <br/>
+        <label>Recruiter: </label>
+        <div id="RecruiterPlaceholder" style="display:inline">
+
+        </div>
+        <br/>
+        <input type="submit" value="Save" class="save"/>
+        <button class="delete">Delete</button>
+    </div>
+</script>
+
+<script type="text/template" id="tpl-recruiter-details">
+    <div style="padding:10px;">
+
+        <label>Id:</label>
+        <input type="text" id="candidateId" name="id" value="<%= Id %>" disabled />
+        <br />
+        <label>Name:</label>
+        <input type="text" id="name" name="name" value="<%= Name %>" required />
+        <br />
+
+        <input type="submit" value="Save" class="save" />
+        <button class="delete">Delete</button>
+    </div>
+</script>
+
+<div id="holder">
+
+    <div id="sidebar" style="width:20%;float:left">
+        Candidates:
+        <div id="candidatesList" style="max-height:100px;overflow:auto">Fetching Candidates...</div>
+        <button id="newCandidate">Add New Candidate</button>
+        <hr/>
+        Recruiters:
+        <div id="recruitersList" style="max-height:100px;overflow:auto">Fetching Recruiters...</div>
+        <button id="newRecruiter">Add New Recruiter</button>
+    </div>
+    <div id="content" style="width:75%;float:right"></div>
+    <div style="clear:both"></div>
+</div>
+
+
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+
+<script type="text/javascript" src="@Url.Content("/Scripts/underscore-min.js")"></script>
+<script type="text/javascript" src="@Url.Content("/Scripts/backbone-min.js")"></script>
+<script type="text/javascript" src="@Url.Content("/Scripts/candidate.js")"></script>
+<script type="text/javascript" src="@Url.Content("/Scripts/recruiter.js")"></script>
+<script type="text/javascript" src="@Url.Content("/Scripts/router.js")"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#newCandidate").click(function (e) {
+            if (app.candidateView) app.candidateView.close();
+            if (app.recruiterView) app.recruiterView.close();
+            var candidate = new Candidate();
+            app.candidateView = new CandidateView({ model: candidate });
+            $('#content').html(app.candidateView.render().el);
+        });
+
+
+        $("#newRecruiter").click(function (e) {
+            if (app.candidateView) app.candidateView.close();
+            if (app.recruiterView) app.recruiterView.close();
+            var recruiter = new Recruiter();
+            app.RecruiterView = new RecruiterView({ model: recruiter });
+            $('#content').html(app.RecruiterView.render().el);
+        });
+        //sync with server every 30 seconds, ideally there should be a cache for this on server side,
+        // use of web api cache to cache results may be
+        //only delta can be fetched using last modified since etc
+        //I would prefer using long polling for this but for demo sake let it be;)
+        setInterval(function () {
+            app.candidateList.fetch();
+            app.recruiterList.fetch();
+        },30000)
+
+    });
+</script>

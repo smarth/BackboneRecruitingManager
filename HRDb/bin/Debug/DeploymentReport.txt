@@ -1,0 +1,34 @@
+﻿** Warnings
+     The object reference [dbo].[Recruiter].[id] differs only by case from the object definition [dbo].[Recruiter].[Id].
+     The object reference [dbo].[Candidate].[name] differs only by case from the object definition [dbo].[Candidate].[Name].
+     The object reference [dbo].[Candidate].[id] differs only by case from the object definition [dbo].[Candidate].[Id].
+     The object reference [dbo].[Candidate].[ID] differs only by case from the object definition [dbo].[Candidate].[Id].
+     The object reference [dbo].[Recruiter].[ID] differs only by case from the object definition [dbo].[Recruiter].[Id].
+     The object reference [dbo].[Candidate].[id] differs only by case from the object definition [dbo].[Candidate].[Id].
+     The object reference [dbo].[Candidate].[name] differs only by case from the object definition [dbo].[Candidate].[Name].
+     The object reference [dbo].[Candidate].[id] differs only by case from the object definition [dbo].[Candidate].[Id].
+
+** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Candidate] (Table)
+       [dbo].[Recruiter] (Table)
+       Foreign Key on [dbo].[Candidate].[Recruiter_Id] (Foreign Key)
+       [dbo].[CreateCandidate] (Procedure)
+       [dbo].[usp_CreateRecruiter] (Procedure)
+       [dbo].[usp_DeleteCandidate] (Procedure)
+       [dbo].[usp_DeleteRecruiter] (Procedure)
+       [dbo].[usp_ReadCandidates] (Procedure)
+       [dbo].[usp_UpdateCandidate] (Procedure)
+       [dbo].[usp_UpdateRecruiter] (Procedure)
+
+** Supporting actions

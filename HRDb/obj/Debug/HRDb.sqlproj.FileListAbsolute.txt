@@ -1,0 +1,9 @@
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\bin\Debug\HRDb.dacpac
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\bin\Debug\HRDb.dll
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\bin\Debug\HRDb.pdb
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\obj\Debug\HRDb.dll
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\obj\Debug\HRDb.pdb
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\obj\Debug\Model.xml
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\obj\Debug\refactor.xml
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\obj\Debug\postdeploy.sql
+c:\users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\HRDb\obj\Debug\predeploy.sql

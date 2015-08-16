@@ -1,0 +1,4 @@
+C:\Users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\bin\Release\DataProvider.dll
+C:\Users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\bin\Release\DataProvider.pdb
+C:\Users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\obj\Release\DataProvider.dll
+C:\Users\smbehl\documents\visual studio 2013\Projects\RecruitingManager\DataProvider\obj\Release\DataProvider.pdb
